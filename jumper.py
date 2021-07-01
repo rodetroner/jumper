@@ -1,9 +1,6 @@
 import sys, pygame
-pygame.init()
 
 size = width, height = 320, 240
-
-screen = pygame.display.set_mode(size)
 
 class Jumper(pygame.sprite.Sprite):
     def __init__(self, screen):
@@ -13,6 +10,10 @@ class Jumper(pygame.sprite.Sprite):
 
     def blit(self):
         self.screen.blit(self.image, self.rect)
+
+
+pygame.init()
+screen = pygame.display.set_mode(size)
 
 jumper = Jumper(screen)
 
